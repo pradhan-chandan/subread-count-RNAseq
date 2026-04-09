@@ -12,13 +12,13 @@ This script ignores multi mapped reads and only takes uniquely mapped reads into
 - Sorted and indexed BAM files (e.g., from HISAT2 or STAR alignment)
 - A genome annotation file in GFF/GFF3 format
 
-# code:
-
+# Script for read count
+```
 #!/bin/bash
 
-ANNOTATION=/path/B157.gff \
+ANNOTATION=/path/genome.gff \
 BAM_DIR=/path to folder of .bam files/ \
-OUTPUT=/path/B157_500max_paired_geneexp.txt
+OUTPUT=/path/align_500max_paired_geneexp.txt
 
 # -------- Parameters --------
 THREADS=8 \
@@ -37,3 +37,4 @@ featureCounts \
   "${BAM_DIR}"/*.bam
 
 echo "featureCounts completed successfully"
+```
